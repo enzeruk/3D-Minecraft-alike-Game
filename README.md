@@ -5,24 +5,18 @@ undergraduate studies in Computer Science and Engineering at University of Ioann
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Abstract
-The game starts by asking the user to *Enter a number* that will define the dimensions (NxNx1) of the 3D scene.
+The game starts by asking the user to *Enter a number* that will define the dimensions (NxNx1) of the 3D scene. Automatically, the 
+Level #1 will be generated, that is just a floor that is created by NxN colorful cubes **randomly**.  
 
-Automatically, the Level #1 will be generated, that is just a floor that is created by NxN colorful cubes **randomly**. 
+The color of the cubes can be ***blue, yellow, red, green*** and ***cyan***. 
+The cube with the ***magenta*** color is unique and defines the starting position of the Player.  
 
-The color of the cubes can be ***blue, yellow, red, green*** and ***cyan***.
-
-The cube with the ***magenta*** color is unique and defines the starting position of the Player. 
-
-At the beginning, the Player stands on the *magenta cube* with 4 lives and 100 points. 
-
-
-The Player cannot exit the limits of the NxNx1 scene. 
-
-The main goal of the game is to create a path so that the Player can reach ***#N-1 Levels*** in ***high***. 
-
+At the beginning, the Player stands on the *magenta cube* with 4 lives and 100 points.
+The Player cannot exit the limits of the NxNx1 scene.
+The main goal of the game is to create a path so that the Player can reach ***#N-1 Levels*** in ***high***.
 The path can be built by using the cubes that consist the floor of Level #1. 
 
-> Each of the cubes on the floor provide specific reserve:
+> Each of the cubes on the floor provide specific reserve as seeing below:
 
 	**blue: 0 cube(s) reserve**
 
