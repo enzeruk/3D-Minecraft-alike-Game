@@ -23,8 +23,6 @@ public class GameSceneSetUp : MonoBehaviour
 
     public void CreateGameScene()
     {
-        Debug.Log("CALLED ME!");
-        Debug.Log("n = " + UserInputSetting.n);
         Transform playerTransform = FirstPersonController.GetComponent<Transform>();
 
         // Create the Level 0 (floor) with cubes of random color
