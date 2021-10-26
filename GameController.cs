@@ -2,20 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.FirstPerson;
 
 
 public class GameController : MonoBehaviour
 {
-
-    public GameObject UIGamePaused;
     public string hitTransformBefore;
 
     // Reference to GameController
     public static GameController gc;
 
+    //public GameObject UIGamePaused;
+
     // Set things up here
     void Awake()
     {
+        //UIGamePaused.SetActive(false); // remove the pause UI
+
         // Setup reference to GameController so that the methods in this script can be called by other scripts
         if (gc == null)
             gc = this.GetComponent<GameController>();
@@ -24,7 +28,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PauseGame();
+        //Pause();
+        GameOverScene();
     }
 
     // Gain points
@@ -81,12 +86,14 @@ public class GameController : MonoBehaviour
 
     }
 
-    // Pause the game by pressing the ESCAPE button
-    void PauseGame()
+    /*// Pause the game by pressing the ESCAPE button
+    void Pause()
     {
         //if (Input.GetKeyDown(KeyCode.Escape))
-        if (Input.GetKeyDown("p"))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("PAUSE.");
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
             if (Time.timeScale > 0f)
             {
                 UIGamePaused.SetActive(true); // this brings up the pause UI
@@ -97,6 +104,37 @@ public class GameController : MonoBehaviour
                 Time.timeScale = 1f; // this unpauses the game action (ie. back to normal)
                 UIGamePaused.SetActive(false); // remove the pause UI
             }
+        }
+    }*/
+
+    void GameOverScene()
+    {
+        if (GUISetUp.life == 0)
+        {
+            // Disable the FPS script to unlock the cursor for the Game Over menu scene
+            enableFPS(false);
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+
+    void enableFPS(bool enable)
+    {
+        GameObject fpsObj = GameObject.Find("FPSController");
+        FirstPersonController fpsScript = fpsObj.GetComponent<FirstPersonController>();
+
+        if (enable)
+        {
+            //Enable FPS script
+            fpsScript.enabled = true;
+        }
+        else
+        {
+            //Disable FPS script
+            fpsScript.enabled = false;
+            //Unlock Mouse and make it visible
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 

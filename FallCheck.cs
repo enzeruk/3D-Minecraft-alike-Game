@@ -5,8 +5,24 @@ using UnityEngine;
 public class FallCheck : MonoBehaviour
 {
 
+    // SFX
+    AudioSource _audio;
+    public AudioClip fallSFX;
+
     public float endYPos;
     public bool fallDetected = false;
+
+    void Start()
+    {
+        _audio = GetComponent<AudioSource>();
+        if (_audio == null)
+        {
+            // If AudioSource is missing
+            Debug.LogWarning("AudioSource component is missing.");
+            // Add the AudioSource component dynamically
+            _audio = gameObject.AddComponent<AudioSource>();
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -62,6 +78,9 @@ public class FallCheck : MonoBehaviour
 
                     // Lose 10 points for each level the player falls
                     Debug.Log("You fall.");
+
+                    _audio.PlayOneShot(fallSFX);
+
                     if (GameController.gc)             // if GameController is available then subScore() 
                         GameController.gc.subScore((10 * CubeManagement.reduseSc) - 10);
 

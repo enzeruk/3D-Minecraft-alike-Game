@@ -10,11 +10,25 @@ public class CubeManagement : MonoBehaviour
     public int cube_rsrv, cylinder_rsrv;
     public static int reduseSc;
 
+    // SFX
+    public AudioClip getSFX;
+    public AudioClip placeSFX;
+    AudioSource _audio;
+
     void Start()
     {
         cube_rsrv = 0;
         cylinder_rsrv = 0;
         reduseSc = 0;
+
+        _audio = GetComponent<AudioSource>();
+        if (_audio == null)
+        { 
+            // If AudioSource is missing
+            Debug.LogWarning("AudioSource component is missing.");
+            // Add the AudioSource component dynamically
+            _audio = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     void Update()
@@ -51,6 +65,10 @@ public class CubeManagement : MonoBehaviour
                         Instantiate(CubePrefab[3], cube_position, Quaternion.identity);
 
                         cube_rsrv++;
+
+                        // Play SFX
+                        _audio.PlayOneShot(getSFX);
+
                         Debug.Log("Cube reserved +1!");
                         if (GameController.gc)              // if GameController is available then subScore()
                             GameController.gc.subScore(5);  
@@ -69,6 +87,10 @@ public class CubeManagement : MonoBehaviour
                         Instantiate(CubePrefab[4], cube_position, Quaternion.identity);
 
                         cube_rsrv++;
+
+                        // Play SFX
+                        _audio.PlayOneShot(getSFX);
+
                         Debug.Log("Cube reserved +1!");
                         if (GameController.gc)
                             GameController.gc.subScore(5);
@@ -87,6 +109,10 @@ public class CubeManagement : MonoBehaviour
                         Instantiate(CubePrefab[0], cube_position, Quaternion.identity);
 
                         cube_rsrv++;
+
+                        // Play SFX
+                        _audio.PlayOneShot(getSFX);
+
                         Debug.Log("Cube reserved +1!");
                         if (GameController.gc)              // if GameController is available then subScore()
                             GameController.gc.subScore(5);
@@ -99,6 +125,10 @@ public class CubeManagement : MonoBehaviour
                         Destroy(hit.transform.gameObject);
 
                         cylinder_rsrv++;
+
+                        // Play SFX
+                        _audio.PlayOneShot(getSFX);
+
                         Debug.Log("Cylinder reserved +1!");
                         if (GameController.gc)              // if GameController is available then subScore()
                             GameController.gc.subScore(5);
@@ -204,6 +234,10 @@ public class CubeManagement : MonoBehaviour
                         newPos.y = level;
                         Instantiate(CubePrefab[Random.Range(0, CubePrefab.Length)], newPos, Quaternion.identity);
                         cube_rsrv--;                                // decrease the reserve by 1
+
+                        // Play SFX
+                        _audio.PlayOneShot(placeSFX);
+
                         Debug.Log("Cube reserved -1!");
                         if (GameController.gc)                      // if GameController is available then addScore()
                             GameController.gc.addScore(10);         // gain 10 points for placing a cube
@@ -303,6 +337,10 @@ public class CubeManagement : MonoBehaviour
                         newPos.y = level + 0.5f;            // place cylider at the right height
                         Instantiate(CylinderPrefab[0], newPos, Quaternion.identity);
                         cylinder_rsrv--;                    // decrease the reserve by 1
+
+                        // Play SFX
+                        _audio.PlayOneShot(placeSFX);
+
                         Debug.Log("Cylinder reserved -1!");
                         if (GameController.gc)                  // if GameController is available then addScore()
                             GameController.gc.addScore(20);     // gain 20 points
