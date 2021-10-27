@@ -11,6 +11,12 @@ public class SetUpVolume : MonoBehaviour
     public static float getMusicSliderValue;
     public static float getSFXSliderValue;
 
+    void Start()
+    {
+        getMusicSliderValue = 0.5f;
+        getSFXSliderValue = 0.7f;
+    }
+
     void Update()
     {
         // Get the volume of the Music in case it is changed by the user

@@ -4,8 +4,25 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-
     public static float startYPos;
+
+    AudioSource _audio;
+    public AudioClip victorySFX;
+
+    void Start()
+    {
+        startYPos = 1;      // Player starts @ Level#1
+
+        _audio = GetComponent<AudioSource>();
+        if (_audio == null)
+        {
+            // If AudioSource is missing
+            Debug.LogWarning("AudioSource component is missing.");
+            // Add the AudioSource component dynamically
+            _audio = gameObject.AddComponent<AudioSource>();
+        }
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -14,7 +31,7 @@ public class PlayerJump : MonoBehaviour
     }
 
     // Player jumps on a cube/cylinder, gets 10 points
-    void DoJump()
+    public void DoJump()
     {
         if (Input.GetKeyDown("space"))
         {
@@ -23,7 +40,7 @@ public class PlayerJump : MonoBehaviour
                 Transform playerTrans = gameObject.GetComponent<Transform>();
                 float y_ang = playerTrans.rotation.eulerAngles.y;
 
-                // Check if cube/cylinder exists in front of player, same way as previous cases
+                // Check if cube/cylinder exists in front of player
                 Vector3 newPos, playerPos;
 
                 // Player's chessboard coordinates
@@ -118,6 +135,9 @@ public class PlayerJump : MonoBehaviour
                         // Jumping on top of cube with N - 1 height places player at N-th Level
                         if (newPos.y - 1 == (UserInputSetting.n - 1))
                         {
+                            // Play SFX
+                            _audio.PlayOneShot(victorySFX);
+
                             Debug.Log("Reached the top height!");
                             if (GameController.gc)                  // if GameController is available then gainLife() and addScore()     
                             {

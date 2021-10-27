@@ -7,7 +7,10 @@ public class GUISetUp : MonoBehaviour
 {
 
     public static int life, points;
-    public Text myText;
+    public Text mainText;
+    public Text rsrvText;
+    public Text objText;
+    public Text levelText;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,13 @@ public class GUISetUp : MonoBehaviour
     void InitializeGUI()
     {
         // Display Life and Points
-        myText.text = " ♥ " + life + "\nScore: " + points;
+        mainText.text = " ♥ " + life + "\nScore: " + points;
+
+        // Cube and cylinder reserve is being calculated @ CubeManagement script
+        rsrvText.text = CubeManagement.cube_rsrv + " cube(s) left.\n" + CubeManagement.cylinder_rsrv +" cylinder(s) left.";
+
+        objText.text = "OBJECTIVE: Use the cubes of the floor to reach Level #" + UserInputSetting.n + " in height!";
+        levelText.text = "Current level #" + PlayerJump.startYPos;
     }
 
 }

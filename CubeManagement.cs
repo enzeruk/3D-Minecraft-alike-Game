@@ -7,7 +7,7 @@ public class CubeManagement : MonoBehaviour
 
     public string hitTransformBefore;
     public GameObject[] CubePrefab, CylinderPrefab;
-    public int cube_rsrv, cylinder_rsrv;
+    public static int cube_rsrv, cylinder_rsrv;
     public static int reduseSc;
 
     // SFX
