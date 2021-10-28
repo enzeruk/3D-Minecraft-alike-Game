@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 4599e3a89fa1f184996529faee8a37a5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MagentaCube: {fileID: 1042638816534912, guid: bc05f0bb5ff964a429ff07a2e4f0b23d,
+      type: 3}
+  - TransparentCube: {fileID: 1290691163807242, guid: 66fd4f3dfa971fc4ead2a85d3e9446ba,
+      type: 3}
+  - UI: {instanceID: 0}
+  - FirstPersonController: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+      type: 3}
+  - SpotLightPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
