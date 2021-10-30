@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class CubeManagement : MonoBehaviour
 {
@@ -41,7 +42,8 @@ public class CubeManagement : MonoBehaviour
     // Get reserve from the cubes by pressing the E key
     public void GetCube()
     {
-        if (Input.GetKeyDown("e"))
+        //if (Input.GetKeyDown("e"))                            // for pc
+        if (CrossPlatformInputManager.GetButtonDown("Get"))     // for mobile
         {
             if (GUISetUp.life > 0 && GUISetUp.points > 0)
             {
@@ -152,7 +154,8 @@ public class CubeManagement : MonoBehaviour
     // Place a cube in the scene by pressing the LMB, if the cube's reserve is valid
     void PlaceCube()
     {
-        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetMouseButtonDown(0))                          // for pc   
+        if (CrossPlatformInputManager.GetButtonDown("PlaceCube"))   // for mobile
         {
             if (GUISetUp.life > 0)
             {
@@ -252,7 +255,8 @@ public class CubeManagement : MonoBehaviour
     // Place a cylinder in the scene by pressing the C key, if the cylinder's reserve is valid
     void PlaceCylinder()
     {
-        if (Input.GetKeyDown("c"))
+        //if (Input.GetKeyDown("c"))                                    // for pc
+        if (CrossPlatformInputManager.GetButtonDown("PlaceCylinder"))   // for mobile
         {
             if (GUISetUp.life > 0)
             {
