@@ -47,15 +47,23 @@ The path can be built by using the cubes that consist the floor of Level #1.
 
 - Use the half-right side of the screen to control the view of the camera.
 
-- Tap on the `GET` button to get a cube from the floor with its corresponding reserve.
-
-- Tap on the `PLACE CUBE` button to place a random color cube from your inventory.
-
-- Tap on the `PLACE CYLINDER` button to place a cyan color cylinder from your inventory.
-
-- Tap on the `JUMP` button to jump on the cubes and cylinders that you place in the scene.
-
 - Tap on the `SETTINGS` button to pause or exit the game scene, or return to the main menu.
+
+- Tap on the `GET` button to get a cube from the floor with its corresponding reserve. This action costs **5 points**.
+
+- Tap on the `PLACE CUBE` button to place a random color cube from your inventory. This action adds **10 points**.
+
+- Tap on the `PLACE CYLINDER` button to place a cyan color cylinder from your inventory. This action adds **20 points**.
+
+- Tap on the `JUMP` button to jump on the cubes and cylinders that you place in the scene. This action adds **10 points**
+
+- Each cube the Player gets from the floor leaves a blank. The Player can fall from that to the void. This action costs **1 life**.
+
+- Reaching the **Level #N-th** in height by building the path with the cubes/cylinders, will add **100 points** and **1 life**.
+
+- The Player can receive damage from possible falls while climbing to the top. This action costs **10 points per Level**.
+
+- Falling from Level #2 to Level #1, will cause **no damage**. 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
