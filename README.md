@@ -18,29 +18,37 @@ The path can be built by using the cubes that consist the floor of Level #1.
 
 > Each of the cubes on the floor provide specific reserve as seeing below:
 
-	**blue: 0 cube(s) reserve**
+	blue cube: 0 cube(s) reserve
 
-	**yellow: 1 cube reserve**
+	yellow cube: 1 cube reserve
 
-	**red: 2 cubes reserve**
+	red cube: 2 cubes reserve
 
-	**green: 3 cubes reserve**
+	green cube: 3 cubes reserve
 
-	**cyan: 1 cylinder reserve**
+	cyan cube: 1 cylinder reserve
 
 > The high of the cubes and cylinders can be converted to the specific Level high:
 
-	**1 cude (1x1x1) : 1 Level high**
+	1 cude (1x1x1) : 1 Level high
 
-	**1 cylinder (1x1x2) : 2 Levels high**
+	1 cylinder (1x1x2) : 2 Levels high
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Controls and Rules
-TODO
+- Use the `joystick` on the left side of the screen to navigate *front, back, left and right*
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Use the half-right side of the screen to control the view of the camera
 
-Greek presentation of the game can be found at `TODO.pdf` file. 
+- Tap on the `GET` button to get a cube from the floor with its corresponding reserve
+
+- Tap on the `PLACE CUBE` button to place a random color cube from your inventory
+
+- Tap on the `PLACE CYLINDER` button to place a cyan color cylinder from your inventory
+
+- Tap on the `JUMP` button to jump on the cubes and cylinders that you place in the scene
+
+- Tap on the `SETTINGS` button to pause or exit the game scene, or return to the main menu
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
