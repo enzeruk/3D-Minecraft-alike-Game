@@ -4,9 +4,9 @@ undergraduate studies in Computer Science and Engineering at University of Ioann
 
 ## Before you Download 
 
-> This 3D game is build for Android devices only. 
+- This 3D game is build for **Android devices only**.
 
-> Compatible OS: `Android 4.4 KitKat (API level 19)` **and above**
+- Compatible OS: `Android 4.4 KitKat (API level 19)` **and above**.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -43,22 +43,22 @@ The path can be built by using the cubes that consist the floor of Level #1.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Controls and Rules
-- Use the `joystick` on the left side of the screen to navigate *front, back, left and right*
+- Use the `joystick` on the left side of the screen to navigate *front, back, left and right*.
 
-- Use the half-right side of the screen to control the view of the camera
+- Use the half-right side of the screen to control the view of the camera.
 
-- Tap on the `GET` button to get a cube from the floor with its corresponding reserve
+- Tap on the `GET` button to get a cube from the floor with its corresponding reserve.
 
-- Tap on the `PLACE CUBE` button to place a random color cube from your inventory
+- Tap on the `PLACE CUBE` button to place a random color cube from your inventory.
 
-- Tap on the `PLACE CYLINDER` button to place a cyan color cylinder from your inventory
+- Tap on the `PLACE CYLINDER` button to place a cyan color cylinder from your inventory.
 
-- Tap on the `JUMP` button to jump on the cubes and cylinders that you place in the scene
+- Tap on the `JUMP` button to jump on the cubes and cylinders that you place in the scene.
 
-- Tap on the `SETTINGS` button to pause or exit the game scene, or return to the main menu
+- Tap on the `SETTINGS` button to pause or exit the game scene, or return to the main menu.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Made with `Unity 2020.2.0f1`
+#### Made with `Unity 2020.2.0f1`
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
