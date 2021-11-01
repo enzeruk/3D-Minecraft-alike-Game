@@ -60,7 +60,7 @@ public class FallCheck : MonoBehaviour
                     CubeManagement.reduseSc = (int)(PlayerJump.startYPos - endYPos);
 
                     // Lose 10 points for each level the player falls
-                    Debug.Log("You fall.");
+                    Debug.Log("You fell.");
 
                     if (GameController.gc)             // if GameController is available then subScore() 
                         GameController.gc.subScore((10 * CubeManagement.reduseSc) - 10);

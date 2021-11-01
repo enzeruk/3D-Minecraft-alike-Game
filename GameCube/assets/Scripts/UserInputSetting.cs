@@ -14,19 +14,7 @@ public class UserInputSetting : MonoBehaviour
 {
     
     public GameObject UI;
-    public static int n;       // User's input (NxNxN dimensions of the scene)
-
-    /*void Awake()
-    {
-        GameObject[] manager = GameObject.FindGameObjectsWithTag("Manager");
-
-        if (manager.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-
-        DontDestroyOnLoad(this.gameObject);
-    }*/
+    public static int n;       // User's input (NxNxN dimensions of the scene) 
 
     void LoadGameScene()
     {    
@@ -34,9 +22,7 @@ public class UserInputSetting : MonoBehaviour
     }
 
     public void InitializeScene(string userInput)
-    {
-        //Transform playerTransform = FirstPersonController.GetComponent<Transform>();
-
+    { 
         UI.SetActive(false);
 
         // User's input N

@@ -39,15 +39,15 @@ public class CubeManagement : MonoBehaviour
         PlaceCylinder();
     }
 
-    // Get reserve from the cubes by pressing the E key
+    // Get reserve from the cubes by pressing the corresponding button (E key for pc build)
     public void GetCube()
     {
-        //if (Input.GetKeyDown("e"))                            // for pc
-        if (CrossPlatformInputManager.GetButtonDown("Get"))     // for mobile
+        //if (Input.GetKeyDown("e"))                                    // for pc
+        if (CrossPlatformInputManager.GetButtonDown("GetCube"))         // for mobile
         {
             if (GUISetUp.life > 0 && GUISetUp.points > 0)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
                 RaycastHit hit;
 
                 if (Physics.Raycast(ray, out hit, 5))
@@ -151,7 +151,7 @@ public class CubeManagement : MonoBehaviour
         }
     }
 
-    // Place a cube in the scene by pressing the LMB, if the cube's reserve is valid
+    // Place a cube in the scene by pressing corresponding button (LMB for pc build), if the cube's reserve is valid
     void PlaceCube()
     {
         //if (Input.GetMouseButtonDown(0))                          // for pc   
@@ -169,11 +169,14 @@ public class CubeManagement : MonoBehaviour
                 // Player's transform
                 Transform playerTrans = gameObject.GetComponent<Transform>();
 
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
                 RaycastHit hit;
 
                 if (Physics.Raycast(ray, out hit, 5))
                 {
+                    //Visible only on Scene Mode
+                    Debug.DrawLine(ray.origin, hit.point, Color.red, 2.5f);
+
                     // Place the cube according to the rotation of the player
                     float y_ang = playerTrans.rotation.eulerAngles.y;
 
@@ -252,7 +255,7 @@ public class CubeManagement : MonoBehaviour
         }
     }
 
-    // Place a cylinder in the scene by pressing the C key, if the cylinder's reserve is valid
+    // Place a cylinder in the scene by pressing the corresponding button (C key for pc build), if the cylinder's reserve is valid
     void PlaceCylinder()
     {
         //if (Input.GetKeyDown("c"))                                    // for pc
@@ -267,7 +270,7 @@ public class CubeManagement : MonoBehaviour
                     return;
                 }
 
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
                 RaycastHit hit;
 
                 if (Physics.Raycast(ray, out hit, 50))

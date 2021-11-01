@@ -41,8 +41,7 @@ public class GameSceneSetUp : MonoBehaviour
                 else
                 {
                     number = rnd.Next(5);
-                    Debug.Log("number = " + number);
-                    Instantiate(CubePrefab[number], new Vector3(i, 1, j), Quaternion.identity);
+                    Instantiate(CubePrefab[number], new Vector3(i, 1, j), Quaternion.identity); 
                 }
 
             }

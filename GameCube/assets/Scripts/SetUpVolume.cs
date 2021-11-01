@@ -21,11 +21,11 @@ public class SetUpVolume : MonoBehaviour
     {
         // Get the volume of the Music in case it is changed by the user
         getMusicSliderValue = GameObject.Find("SliderMusic").GetComponent<Slider>().value;
-        Debug.Log("Music Slider Value = " + getMusicSliderValue);
+        //Debug.Log("Music Slider Value = " + getMusicSliderValue);
 
         // Get the volume of the SFX in case it is changed by the user
         getSFXSliderValue = GameObject.Find("SliderSFX").GetComponent<Slider>().value;
-        Debug.Log("SFX Slider Value = " + getSFXSliderValue);
+        //Debug.Log("SFX Slider Value = " + getSFXSliderValue);
     }
 
     public void SetMusicLevel(float sliderValue)

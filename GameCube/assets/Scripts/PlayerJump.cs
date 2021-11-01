@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerJump : MonoBehaviour
 {
@@ -33,7 +34,8 @@ public class PlayerJump : MonoBehaviour
     // Player jumps on a cube/cylinder, gets 10 points
     public void DoJump()
     {
-        if (Input.GetKeyDown("space"))
+        //if (Input.GetKeyDown("space"))                        // for pc
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))    // for mobile
         {
             if (GUISetUp.life > 0)
             {

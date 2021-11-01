@@ -11,6 +11,7 @@ public class PauseGame : MonoBehaviour
     public static bool isPaused;
 
     public GameObject UIGamePaused;
+    public GameObject touchControls;
 
     // SFX
     public AudioClip resumeSFX;
@@ -50,20 +51,28 @@ public class PauseGame : MonoBehaviour
     // Pause the game by pressing the ESCAPE button
     void Pause()
     {
-        Debug.Log("PAUSE.");
-
+        Debug.Log("Game Paused.");
+        
         UIGamePaused.SetActive(true); // this brings up the pause UI
         Time.timeScale = 0f; // this pauses the game action  
+
+        // Disable the FPS script to unlock the cursor for the Game Over menu scene
+        touchControls.SetActive(false);
+
         isPaused = true;
     }
 
     public void Resume()
     {
-        Debug.Log("RESUME.");
+        Debug.Log("Resume Game.");
 
         PlaySFX(resumeSFX);
         UIGamePaused.SetActive(false); // remove the pause UI
-        Time.timeScale = 1f; // this unpauses the game action (ie. back to normal)
+        Time.timeScale = 1f; // this unpauses the game action (ie. back to normal)  
+
+        // Enable the Touchpad so that the user can rotate the main camera view while in Game Scene
+        touchControls.SetActive(true);
+
         isPaused = false;
     }
 
@@ -78,6 +87,7 @@ public class PauseGame : MonoBehaviour
 
     public void Exit()
     {
+        PlaySFX(exitSFX);
         Debug.Log("Exit Game.");
         Application.Quit();
     }

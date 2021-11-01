@@ -23,11 +23,11 @@ public class UpdateVolume : MonoBehaviour
         {
             setSFXVol = SetUpVolume.getSFXSliderValue;
             sources[0].volume = setSFXVol;     // @ FPS: 1st Audio Source component is the SFX
-            Debug.Log("SFX vol @ FPS = " + sources[0].volume);
+            //Debug.Log("SFX vol @ FPS = " + sources[0].volume);
 
             setMusicVol = SetUpVolume.getMusicSliderValue;
             sources[1].volume = setMusicVol;   // @ FPS: 2d Audio Source component is the background Music
-            Debug.Log("Music vol @ FPS = " + sources[1].volume);
+            //Debug.Log("Music vol @ FPS = " + sources[1].volume);
         }
     }
 
