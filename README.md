@@ -70,3 +70,23 @@ The path can be built by using the cubes that consist the floor of Level #1.
 #### Made with `Unity 2020.2.0f1`
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#### Credits (SFX)
+
+- Main Menu background music: **'Mystery Solved' by X3nus** (available [here](https://freesound.org/people/X3nus/sounds/449940/))
+
+- Game Scene background music: **'puzzle' by VABsounds** (available [here](https://freesound.org/people/VABsounds/sounds/441650/))
+
+- Cube removal SFX: **'remove chalk' by JuanFG** (available [here](https://freesound.org/people/JuanFG/sounds/471749/))
+
+- Cube placement SFX: **'bubble pop out' by tsidilin** (available [here](https://freesound.org/people/tsidilin/sounds/254892/))
+
+- Victory SFX: **'Jingle_Win_00' by LittleRobotSoundFactory** (available [here](https://freesound.org/people/LittleRobotSoundFactory/sounds/270528/))
+
+- Game Over SFX: **'Game Over' by jhyland** (available [here](https://freesound.org/people/jhyland/sounds/539674/))
+
+- Menu Click 1 SFX: **'Menu Glass Click' by Soughtaftersounds** (available [here](https://freesound.org/people/Soughtaftersounds/sounds/145441/))
+
+- Menu Click 2 SFX: **'Menu Click - Two Tone' by Soughtaftersounds** (available [here](https://freesound.org/people/Soughtaftersounds/sounds/145442/))
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
