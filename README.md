@@ -2,7 +2,7 @@
 Description: A 3D game similar to Minecraft was created using the game engine ***Unity3D*** in 2019, for the core course "Computer Graphics and Interactive Systems" for my 
 undergraduate studies in Computer Science and Engineering at University of Ioannina.
 
-## Before you Download 
+### Before you Download 
 
 - This 3D game is build for **Android devices only**.
 
