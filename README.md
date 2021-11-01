@@ -2,9 +2,9 @@
 Description: A 3D game similar to Minecraft was created using the game engine ***Unity3D*** in 2019, for the core course "Computer Graphics and Interactive Systems" for my 
 undergraduate studies in Computer Science and Engineering at University of Ioannina.
 
-## BEFORE YOU DOWNLOAD 
+## Before you Download 
 
->This 3D game is build for Android devices only. 
+> This 3D game is build for Android devices only. 
 
 > Compatible OS: `Android 4.4 KitKat (API level 19)` **and above**
 
@@ -59,6 +59,6 @@ The path can be built by using the cubes that consist the floor of Level #1.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Made with `Unity 2020.2.0f1`
+# Made with `Unity 2020.2.0f1`
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
