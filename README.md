@@ -71,7 +71,7 @@ The path can be built by using the cubes that consist the floor of Level #1.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#### Credits (SFX)
+### Credits (SFX)
 
 - Main Menu background music: **'Mystery Solved' by X3nus** (available [here](https://freesound.org/people/X3nus/sounds/449940/))
 
