@@ -1,4 +1,4 @@
-# 3D Minecraft-alike Game
+# 3D Minecraft-alike Game [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=plastic&logo=unity)](https://unity3d.com)
 Description: A 3D game similar to Minecraft was created using the game engine ***Unity3D*** in 2019, for the core course "Computer Graphics and Interactive Systems" for my 
 undergraduate studies in Computer Science and Engineering at University of Ioannina.
 
